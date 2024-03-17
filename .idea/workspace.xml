@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d2cbb690-c2ba-49a0-8d3e-f5ec529c6b74" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/config/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/config/ConfigStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/config/IllegalKeyException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/Bootstrap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/ConfigManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/command/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/command/CommandTemplate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/command/InsufficientArgumentException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/command/Option.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/command/OptionInsufficientArgumentException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/command/OptionNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/command/OptionTemplate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/command/TokenIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/common/Bundle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/common/Env.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/common/StatusCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/config/ConfigManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/entry/Entry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/entry/EntryManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/entry/EntryNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/entry/KeyNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/extend/HoleApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/extend/HoleAppBased.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/extend/HoleManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/handler/Handler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/handler/HandlerAlreadyExistException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/handler/HandlerManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/handler/HandlerNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/handler/builtin/DefaultHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/ConfigurablePlugin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/ExecutionAopFunctionality.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/Plugin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/PluginManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/PrintBundleFunctionality.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/builtin/keyvalue/KeyValuePlugin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/builtin/keyvalue/NewEntryHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/builtin/server/ServerPlugin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/kernel/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/kernel/AppBased.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/kernel/Destroyable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/kernel/Initiable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/kernel/Manager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/kernel/Usable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ConfigTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2cT1Bqit8DCxZnP3nlJBYSC0bHi" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.ConfigTest.createConfig.executor": "Run",
+    "Gradle.ConfigTest.executor": "Run",
+    "Gradle.ConfigTest.testBasicFunctionality.executor": "Run",
+    "Gradle.ConfigTest.testConfigStack.executor": "Run",
+    "Gradle.ConfigTest.testConfigStackLoad.executor": "Run",
+    "Gradle.hole [:Bootstrap.main()].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "deletionFromPopupRequiresConfirmation": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/jameschan/Git/public/hole",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.54022986",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/me/jameschan/hole/config" />
+      <recent name="$PROJECT_DIR$/src/main/java/me/jameschan/hole/entry" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Bootstrap">
+    <configuration name="Bootstrap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.jameschan.hole.Bootstrap" />
+      <module name="hole.main" />
+      <option name="PROGRAM_PARAMETERS" value="--version" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.jameschan.hole.common.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ConfigTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.ConfigTest" />
+        <item itemvalue="Application.Bootstrap" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-322ed176" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d2cbb690-c2ba-49a0-8d3e-f5ec529c6b74" name="Changes" comment="" />
+      <created>1708120623760</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708120623760</updated>
+      <workItem from="1708120626346" duration="8968000" />
+      <workItem from="1708188194415" duration="30000" />
+      <workItem from="1708188291592" duration="979000" />
+      <workItem from="1708189281757" duration="1117000" />
+      <workItem from="1708190431253" duration="8596000" />
+      <workItem from="1709156561332" duration="374000" />
+      <workItem from="1709666768196" duration="59000" />
+      <workItem from="1709666834125" duration="50000" />
+      <workItem from="1710709077072" duration="417000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
