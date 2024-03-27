@@ -8,6 +8,7 @@ import me.jameschan.hole.common.StatusCode;
 import me.jameschan.hole.extend.HoleApp;
 import me.jameschan.hole.extend.HoleManager;
 import me.jameschan.hole.handler.builtin.DefaultHandler;
+import me.jameschan.hole.handler.builtin.NewHandler;
 import me.jameschan.hole.plugin.PluginManager;
 
 import java.util.HashMap;
@@ -49,6 +50,7 @@ public class HandlerManager extends HoleManager {
      */
     private void initBuiltinHandlers() {
         this.registerHandler(null, new DefaultHandler(), false);
+        this.registerHandler("new", new NewHandler(), false);
     }
 
     /**
@@ -93,8 +95,8 @@ public class HandlerManager extends HoleManager {
      * retrieves the corresponding handler, and delegates the command handling to the handler.
      * <p>
      * If the token iterator contains a valid command name, it retrieves the corresponding handler
-     * and invokes its {@link Handler#handle(Command, Bundle)} method with a command object created
-     * from the token iterator and the provided bundle.
+     * and invokes its {@link Handler#handle(Command, Bundle, HoleApp)} method with a command object
+     * created from the token iterator and the provided bundle.
      * <p>
      * The command handling process involves parsing the command line tokens into a {@link Command}
      * object using the command template associated with the handler. The handler's {@code handle}
@@ -111,7 +113,7 @@ public class HandlerManager extends HoleManager {
         final var commandName = hasCommand ? tokenIterator.next() : null;
         final var handler = getHandler(commandName);
 
-        handler.handle(handler.commandTemplate.make(tokenIterator), bundle);
+        handler.handle(handler.commandTemplate.make(tokenIterator), bundle, app);
     }
 
     /**

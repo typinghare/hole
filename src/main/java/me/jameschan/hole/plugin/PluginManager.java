@@ -3,14 +3,8 @@ package me.jameschan.hole.plugin;
 import me.jameschan.hole.extend.HoleApp;
 import me.jameschan.hole.extend.HoleManager;
 import me.jameschan.hole.plugin.builtin.keyvalue.KeyValuePlugin;
-import me.jameschan.hole.plugin.builtin.server.ServerPlugin;
+import me.jameschan.hole.plugin.builtin.time.TimePlugin;
 
-import java.io.IOException;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.*;
 import java.util.function.Consumer;
 import java.util.stream.StreamSupport;
@@ -23,9 +17,14 @@ import java.util.stream.StreamSupport;
  */
 public class PluginManager extends HoleManager {
     /**
-     * A mapping of plugin classes to their respective instances.
+     * Plugin loader.
      */
-    private final Map<Class<? extends Plugin>, Plugin> byClass = new HashMap<>();
+    private final PluginLoader pluginLoader;
+
+    /**
+     * A mapping of plugin class names to their respective instances.
+     */
+    private final Map<String, Plugin> byClassName = new HashMap<>();
 
     /**
      * A set of currently enabled plugins.
@@ -38,91 +37,32 @@ public class PluginManager extends HoleManager {
      */
     public PluginManager(final HoleApp app) {
         super(app);
+        this.pluginLoader = new PluginLoader(app);
     }
 
     @Override
     public void init() {
         super.init();
+        load(KeyValuePlugin.class);
+        load(TimePlugin.class);
 
-        // Load all plugins
-        final List<String> pluginNameList = new ArrayList<>() {{
-            add(ServerPlugin.class.getName());
-            add(KeyValuePlugin.class.getName());
-        }};
-
-        pluginNameList.forEach(this::loadPlugin);
-        final var classpath = Paths.get(System.getProperty("java.class.path") + "me.jameschan.plugin.builtin");
-        System.out.println(classpath.toString());
-//        loadPluginDir(classpath);
+//        final var classpath = System.getProperty("java.class.path");
+//        final var classpathArray = classpath.split(":");
+//        Arrays.stream(classpathArray).forEach(System.out::println);
     }
 
     /**
-     * Registers a plugin with this manager, initializing it in the process.
-     * @param plugin The plugin to register.
+     * Loads a plugin class.
+     * @param Class A class that extends the {@code Plugin} class in this package.
      */
-    public void register(final Plugin plugin) {
-        byClass.put(plugin.getClass(), plugin);
-
-        plugin.init();
-    }
-
-    public void loadPlugin(final String pluginName) {
+    public void load(final Class<? extends Plugin> Class) {
         try {
-            final Class<?> pluginClass = Class.forName(pluginName);
-            if (!Plugin.class.isAssignableFrom(pluginClass)) {
-                throw new IllegalArgumentException("Class " + pluginName + " is not a Plugin");
-            }
-
-            @SuppressWarnings("unchecked") final Class<Plugin> pluginType = (Class<Plugin>) pluginClass;
-
-            Constructor<Plugin> constructor;
-            try {
-                constructor = pluginType.getDeclaredConstructor(HoleApp.class);
-            } catch (NoSuchMethodException e) {
-                throw new NoSuchMethodException("Constructor HoleApp.class not found in " + pluginName);
-            }
-
-            Plugin pluginInstance;
-            try {
-                constructor.setAccessible(true); // In case the constructor is not public
-                pluginInstance = constructor.newInstance(app);
-            } catch (InstantiationException | IllegalAccessException |
-                     InvocationTargetException e) {
-                throw new RuntimeException("Failed to instantiate plugin: " + pluginName, e);
-            }
-
-            register(pluginInstance);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException("Plugin class not found: " + e.getMessage(), e);
-        } catch (IllegalArgumentException | NoSuchMethodException e) {
-            throw new RuntimeException(e.getMessage(), e);
+            final var plugin = pluginLoader.loadByClass(Class);
+            plugin.init();
+            byClassName.put(Class.getName(), plugin);
+        } catch (final RuntimeException e) {
+            throw new RuntimeException("Fail to load and initialize plugin: " + Class.getName(), e);
         }
-    }
-
-    public void loadPluginDir(final Path pluginDirPath) {
-        try (final var directoryStream = Files.newDirectoryStream(pluginDirPath)) {
-            for (Path path : directoryStream) {
-                if (!Files.isDirectory(path)) continue;
-
-                System.out.println(path.getFileName().toFile().getAbsoluteFile());
-            }
-        } catch (final IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    /**
-     * Retrieves a plugin by its name.
-     * @param pluginName The name of the plugin to retrieve.
-     * @return The plugin instance associated with the given name.
-     * @throws NoSuchElementException If no plugin with the given name is found.
-     */
-    public Plugin getPluginByName(final String pluginName) {
-        return byClass.keySet().stream()
-            .filter(pluginClass -> pluginClass.getSimpleName().equals(pluginName))
-            .findFirst()
-            .map(byClass::get)
-            .orElseThrow();
     }
 
     /**
@@ -130,9 +70,10 @@ public class PluginManager extends HoleManager {
      * @param pluginName The name of the plugin to enable.
      */
     public void enable(final String pluginName) {
-        final var plugin = getPluginByName(pluginName);
-
-        enabledPluginSet.add((Plugin) plugin.useThis());
+        final var plugin = byClassName.get(pluginName);
+        if (plugin != null) {
+            enabledPluginSet.add((Plugin) plugin.useThis());
+        }
     }
 
     /**
@@ -140,7 +81,7 @@ public class PluginManager extends HoleManager {
      * @param pluginName The name of the plugin to disable.
      */
     public void disable(final String pluginName) {
-        final var plugin = getPluginByName(pluginName);
+        final var plugin = byClassName.get(pluginName);
         enabledPluginSet.remove(plugin);
     }
 

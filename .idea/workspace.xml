@@ -5,61 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2cbb690-c2ba-49a0-8d3e-f5ec529c6b74" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/config/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/config/ConfigStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/config/IllegalKeyException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/Bootstrap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/ConfigManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/command/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/command/CommandTemplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/command/InsufficientArgumentException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/command/Option.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/command/OptionInsufficientArgumentException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/command/OptionNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/command/OptionTemplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/command/TokenIterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/common/Bundle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/common/Env.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/common/StatusCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/config/ConfigManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/entry/Entry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/entry/EntryManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/entry/EntryNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/entry/KeyNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/extend/HoleApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/extend/HoleAppBased.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/extend/HoleManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/handler/Handler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/handler/HandlerAlreadyExistException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/handler/HandlerManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/handler/HandlerNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/handler/builtin/DefaultHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/ConfigurablePlugin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/ExecutionAopFunctionality.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/Plugin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/PluginManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/PrintBundleFunctionality.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/builtin/keyvalue/KeyValuePlugin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/builtin/keyvalue/NewEntryHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/builtin/server/ServerPlugin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/kernel/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/kernel/AppBased.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/kernel/Destroyable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/kernel/Initiable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/kernel/Manager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/kernel/Usable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ConfigTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/idea.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/annotation/OverrideConstructor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/handler/builtin/ItemHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/handler/builtin/NewHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/EntryModificationFunctionality.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/PluginJar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/PluginLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/PluginLoadingException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/builtin/keyvalue/KeyHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/builtin/time/TimePlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/ConfigManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/config/ConfigManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/config/ConfigManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/entry/EntryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/entry/EntryManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/handler/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/handler/Handler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/handler/HandlerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/handler/HandlerManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/handler/builtin/DefaultHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/handler/builtin/DefaultHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/ConfigurablePlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/ConfigFunctionality.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/Plugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/Plugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/PluginManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/PluginManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/builtin/keyvalue/KeyValuePlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/builtin/keyvalue/KeyValuePlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/builtin/keyvalue/NewEntryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/jameschan/hole/plugin/builtin/keyvalue/NewHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +51,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -107,33 +75,33 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.ConfigTest.createConfig.executor": "Run",
-    "Gradle.ConfigTest.executor": "Run",
-    "Gradle.ConfigTest.testBasicFunctionality.executor": "Run",
-    "Gradle.ConfigTest.testConfigStack.executor": "Run",
-    "Gradle.ConfigTest.testConfigStackLoad.executor": "Run",
-    "Gradle.hole [:Bootstrap.main()].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/jameschan/Git/public/hole",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.54022986",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.ConfigTest.createConfig.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ConfigTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ConfigTest.testBasicFunctionality.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ConfigTest.testConfigStack.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ConfigTest.testConfigStackLoad.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.hole [:Bootstrap.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jameschan/Git/public/hole&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.54022986&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/me/jameschan/hole/config" />
@@ -209,7 +177,12 @@
       <workItem from="1709156561332" duration="374000" />
       <workItem from="1709666768196" duration="59000" />
       <workItem from="1709666834125" duration="50000" />
-      <workItem from="1710709077072" duration="417000" />
+      <workItem from="1710709077072" duration="2264000" />
+      <workItem from="1710727943726" duration="51000" />
+      <workItem from="1710776243816" duration="3820000" />
+      <workItem from="1711330510327" duration="4120000" />
+      <workItem from="1711422007312" duration="4785000" />
+      <workItem from="1711502673538" duration="4039000" />
     </task>
     <servers />
   </component>

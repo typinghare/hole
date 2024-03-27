@@ -3,6 +3,7 @@ package me.jameschan.hole.plugin;
 import me.jameschan.config.Config;
 import me.jameschan.hole.command.TokenIterator;
 import me.jameschan.hole.common.Bundle;
+import me.jameschan.hole.entry.Entry;
 import me.jameschan.hole.extend.HoleApp;
 import me.jameschan.hole.extend.HoleAppBased;
 import me.jameschan.hole.handler.Handler;
@@ -11,10 +12,10 @@ import me.jameschan.hole.handler.HandlerManager;
 import java.util.Collection;
 
 public class Plugin extends HoleAppBased implements
-    ConfigurablePlugin,
+    ConfigFunctionality,
     ExecutionAopFunctionality,
-    PrintBundleFunctionality {
-
+    PrintBundleFunctionality,
+    EntryModificationFunctionality {
     /**
      * Constructs an HoleAppBased object.
      * @param app The application instance this object is based upon.
@@ -47,37 +48,9 @@ public class Plugin extends HoleAppBased implements
     public void beforePrint(final Bundle bundle) {
     }
 
-//    /**
-//     * Called when an entry is loaded.
-//     * @param entry The entry to be loaded.
-//     * @param data  data
-//     */
-//    public void onLoadEntry(Entry entry, Map<String, String> data) {
-//    }
-//
-//    /**
-//     * Called when an entry is being created.
-//     * @param entry The entry is being created.
-//     * @param data  data
-//     */
-//    public void onCreateEntry(Entry entry, Map<String, String> data) {
-//    }
-//
-//    /**
-//     * Called when an entry is being converted an entry object.
-//     * @param entry The entry to be converted.
-//     * @param data  data
-//     */
-//    public void onEntryToObject(Entry entry, Map<String, String> data) {
-//    }
-//
-//    /**
-//     * Called when an entry is being printed to the console.
-//     * @param entry The entry is being printed.
-//     * @param data  data
-//     */
-//    public void onPrintEntry(Entry entry, Map<String, String> data) {
-//    }
+    @Override
+    public void onCreateEntry(final Entry entry) {
+    }
 
     /**
      * A convenient method for derived classes to override and registers essential handlers in it.

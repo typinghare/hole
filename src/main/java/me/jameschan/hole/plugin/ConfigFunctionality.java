@@ -4,7 +4,7 @@ import me.jameschan.config.Config;
 
 import java.util.Collection;
 
-public interface ConfigurablePlugin {
+public interface ConfigFunctionality {
     /**
      * Returns configuration keys that are allowed to set of get by the application.
      * @return configuration keys.

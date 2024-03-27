@@ -3,6 +3,7 @@ package me.jameschan.hole.handler;
 import me.jameschan.hole.command.Command;
 import me.jameschan.hole.command.CommandTemplate;
 import me.jameschan.hole.common.Bundle;
+import me.jameschan.hole.extend.HoleApp;
 
 /**
  * Provides an abstract base for command execution logic tied to a specific {@link CommandTemplate}.
@@ -31,9 +32,9 @@ public abstract class Handler {
      * arguments and options, to perform the necessary operations within the bundle.
      * @param command The {@link Command} object representing the parsed command. This includes the
      *                command name, arguments, and options as defined by the {@code lineTemplate}.
-     * @param bundle  The {@link Bundle} instance is an app based object, which contains
-     *                environment, status code, and a string buffer that stores the output from the
-     *                execution.
+     * @param bundle  The {@link Bundle} instance contains environment, status code, and a string
+     *                buffer that stores the output from the execution.
+     * @param app     The {@link HoleApp} instance.
      */
-    public abstract void handle(final Command command, final Bundle bundle);
+    public abstract void handle(final Command command, final Bundle bundle, final HoleApp app);
 }

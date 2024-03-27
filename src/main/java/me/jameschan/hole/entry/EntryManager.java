@@ -2,6 +2,7 @@ package me.jameschan.hole.entry;
 
 import me.jameschan.hole.extend.HoleApp;
 import me.jameschan.hole.extend.HoleManager;
+import me.jameschan.hole.plugin.PluginManager;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -59,6 +60,11 @@ public class EntryManager extends HoleManager {
         final var id = ++this.maxId;
         final var entry = new Entry(id);
         this.byId.put(id, entry);
+
+        data.forEach(entry::set);
+
+        final var pluginManager = use(PluginManager.class);
+        pluginManager.forEachEnabled(plugin -> plugin.onCreateEntry(entry));
 
         return entry;
     }

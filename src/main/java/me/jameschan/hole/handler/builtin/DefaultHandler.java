@@ -1,11 +1,12 @@
 package me.jameschan.hole.handler.builtin;
 
-import me.jameschan.hole.common.StatusCode;
 import me.jameschan.hole.command.Command;
 import me.jameschan.hole.command.CommandTemplate;
 import me.jameschan.hole.command.OptionTemplate;
-import me.jameschan.hole.handler.Handler;
 import me.jameschan.hole.common.Bundle;
+import me.jameschan.hole.common.StatusCode;
+import me.jameschan.hole.extend.HoleApp;
+import me.jameschan.hole.handler.Handler;
 
 public class DefaultHandler extends Handler {
     public DefaultHandler() {
@@ -16,7 +17,7 @@ public class DefaultHandler extends Handler {
     }
 
     @Override
-    public void handle(final Command command, final Bundle bundle) {
+    public void handle(final Command command, final Bundle bundle, final HoleApp app) {
         bundle.statusCode = StatusCode.SUCCESS;
 
         final var versionOption = command.getOption("version");

@@ -12,7 +12,10 @@ import java.util.HashSet;
  * Config manager.
  */
 public class ConfigManager extends HoleManager {
+    // Built-in config keys
     public static final String KEY_USER_CONFIG = "user.config";
+    public static final String KEY_PLUGIN_PATH = "plugin.path";
+    public static final String KEY_PLUGIN_ENABLED = "plugin.enabled";
 
     /**
      * Configuration stack.
@@ -29,18 +32,24 @@ public class ConfigManager extends HoleManager {
         // Plugin manager
         final var pluginManager = app.use(PluginManager.class);
 
-        // Configuration keys
+        // Set up configuration keys
         final var keySet = new HashSet<String>() {{
             add(KEY_USER_CONFIG);
+            add(KEY_PLUGIN_PATH);
+            add(KEY_PLUGIN_ENABLED);
+
             pluginManager.forEachEnabled(plugin -> addAll(plugin.configKeys()));
         }};
 
         // Configuration values
-        configStack = new ConfigStack(new Config(keySet) {{
+        final var defaultConfig = new Config(keySet) {{
             set(KEY_USER_CONFIG, null);
+            set(KEY_PLUGIN_PATH, null);
+            set(KEY_PLUGIN_ENABLED, null);
 
             pluginManager.forEachEnabled(plugin -> plugin.setConfig(this));
-        }});
+        }};
+        configStack = new ConfigStack(defaultConfig);
     }
 
     public Config getDynamic() {
